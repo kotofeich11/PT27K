@@ -35,7 +35,7 @@ grid = create_grid()
 
 screen = SC.draw_splash_screen(screen)
 
-def make_turn(grid: List, row:int, column:int, item_id:int) -> bool:  
+def make_turn(grid: List, row: int, column: int, item_id: int) -> bool:  
     if grid[row][column] == 0:
         grid[row][column] = item_id
         return True

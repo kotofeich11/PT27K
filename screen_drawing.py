@@ -1,6 +1,7 @@
 import pygame
 from pygame import Surface
 import screen_drawing as SC
+from typing import List
 
 white = (255, 255, 255)
 red = (255, 0, 0)
@@ -87,7 +88,7 @@ def draw_start_screen(screen: Surface):
 
     return screen
 
-def draw_game_screen(screen: Surface, grid, field_width, field_height, field_margin):
+def draw_game_screen(screen: Surface, grid :List, field_width :int, field_height :int, field_margin :int):
     
     line_width = 30
 
@@ -111,7 +112,7 @@ def draw_game_screen(screen: Surface, grid, field_width, field_height, field_mar
 
     return screen
 
-def update_grid(field_width, field_margin, screen, grid):
+def update_grid(field_width :int, field_margin :int, screen :Surface, grid: List):
     for row in range(3):
         for column in range(3):
             if grid[row][column] == 1:

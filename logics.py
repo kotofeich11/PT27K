@@ -1,6 +1,6 @@
 from typing import Dict, List
 
-def win_check(grid: List, player_id:int) -> bool:
+def win_check(grid: List, player_id: int) -> bool:
     for column in range(3):    
         if grid[0][column] == player_id and grid[1][column] == player_id and grid[2][column] == player_id:
              return True
@@ -17,7 +17,7 @@ def win_check(grid: List, player_id:int) -> bool:
 
     return False      
         
-def get_best_turn(grid: List, player_id:int) -> Dict:
+def get_best_turn(grid: List, player_id: int) -> Dict:
 
     answer_list = {}
 
@@ -63,7 +63,7 @@ def get_best_turn(grid: List, player_id:int) -> Dict:
 
         return answer_list  
     
-def grid_full(grid:List):
+def grid_full(grid: List) -> bool:
     for row in range(3):
         for column in range(3):
             if grid[row][column] == 0:
